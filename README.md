@@ -1,5 +1,9 @@
 # Day2DayFFMPEG
 
+
+# MXF to MP4
+#### ffmpeg -i input.mxf -vcodec libx264 output.mp4
+
 # Reduce File to 720x480
 #### ffmpeg -i input.avi -s 720x480 -c:a copy output.mkv
 
