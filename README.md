@@ -12,3 +12,8 @@
 
 # AAC to MP3
 #### ffmpeg -i audio.aac -acodec libmp3lame audio.mp3
+
+
+# Fix Scale Issues
+## Setdar is key
+#### for i in *.mpg; do ffmpeg -i "$i"-vf setdar=16/9  "${i%.*}.mp4"; done;
