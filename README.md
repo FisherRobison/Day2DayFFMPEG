@@ -17,3 +17,7 @@
 # Fix Scale Issues
 ## Setdar is key
 #### for i in *.mpg; do ffmpeg -i "$i"-vf setdar=16/9  "${i%.*}.mp4"; done;
+
+
+# 1 FPS
+#### ffmpeg -i file.mp4 -r 1 -q:v 1 -s 1280x720 -aspect 16:9 -filter_complex "scale=iw*sar:ih, pad=max(iw\,ih*(16/9)):ow/(16/9):(ow-iw)/2:(oh-ih)/2:black" ./images/frame_%03d.jpg
