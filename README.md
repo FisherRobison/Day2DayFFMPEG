@@ -21,3 +21,7 @@
 
 # 1 FPS
 #### ffmpeg -i file.mp4 -r 1 -q:v 1 -s 1280x720 -aspect 16:9 -filter_complex "scale=iw*sar:ih, pad=max(iw\,ih*(16/9)):ow/(16/9):(ow-iw)/2:(oh-ih)/2:black" frame_%03d.jpg
+
+
+# Packages 
+#### brew install ffmpeg --with-faac --with-fdk-aac --with-ffplay --with-fontconfig --with-freetype --with-frei0r --with-libass --with-libbluray --with-libcaca --with-libquvi --with-libsoxr --with-libssh --with-libvidstab --with-libvorbis --with-libvpx --with-opencore-amr --with-openjpeg --with-openssl --with-opus --with-rtmpdump --with-schroedinger --with-speex --with-theora --with-tools --with-webp --with-x265 --with-zeromq
