@@ -8,7 +8,7 @@
 #### ffmpeg -i input.avi -s 720x480 -c:a copy output.mkv
 
 # Split File Into 5 Minute Chunks
-#### ffmpeg -i FILENAME -y -f segment -segment_time 300 -segment_start_number 1 -vcodec libx264 -vprofile high -preset slow -threads 2 -acodec libfdk_aac -ac 2 -af ‘volume=3.0’ -reset_timestamps 1 -map 0:0 -map 0:1 FILENAME%03d.mp4
+#### ffmpeg -i FILENAME -y -f segment -segment_time 300 -segment_start_number 1 -vcodec libx264 -vprofile high -preset slow -threads 2 -acodec libfdk_aac -ac 2 -reset_timestamps 1 -map 0:0 -map 0:1 FILENAME%03d.mp4
 
 # AAC to MP3
 #### ffmpeg -i audio.aac -acodec libmp3lame audio.mp3
