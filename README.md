@@ -28,3 +28,11 @@
 
 # JPG to MP4
 #### ffmpeg -r 60 -f image2 -s 1920x1080 -i pic%04d.png -vcodec libx264 -crf 25  -pix_fmt yuv420p test.mp4
+
+
+# Transcode entire folder
+### for i in *.avi;
+  do name=`echo $i | cut -d'.' -f1`;
+  echo $name;
+  ffmpeg -i "$i" "${name}.mov";
+done
